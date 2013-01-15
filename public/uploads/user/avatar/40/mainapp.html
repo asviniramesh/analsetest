@@ -1,0 +1,472 @@
+
+<!-- saved from url=(0048)file:///home/asvini2/Desktop/mainapp.html#create -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+<script src="./mainapp_files/jquery-1.4.3.js" type="text/javascript">  </script>
+<script src="./mainapp_files/underscore-1.1.7.js" type="text/javascript">  </script>
+<script src="./mainapp_files/backbone-0.3.3.js" type="text/javascript">  </script>
+<script src="./mainapp_files/jquery.event.drag-2.0.js" type="text/javascript">  </script>
+<script src="./mainapp_files/jquery.event.drop-2.0.js" type="text/javascript">  </script>
+
+<script src="./mainapp_files/jquery-ui-1.8.16.min.js" type="text/javascript">  </script>
+<script src="./mainapp_files/jquery.hotkeys-0.8.js" type="text/javascript">  </script>
+<script src="./mainapp_files/typewatch.js" type="text/javascript">  </script>
+<script src="./mainapp_files/jquery.tipsy.js" type="text/javascript">  </script>
+<script src="./mainapp_files/socket.io.js" type="text/javascript">  </script>
+<script src="./mainapp_files/autoresize.jquery-1.04.js" type="text/javascript">  </script>
+
+<script src="./mainapp_files/slick.core.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.grid.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.editors.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.dataview.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.groupitemmetadataprovider.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.remotemodel.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.autotooltips.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.cellcopymanager.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.cellrangedecorator.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.cellrangeselector.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.cellselectionmodel.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.checkboxselectcolumn.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.rowmovemanager.js" type="text/javascript">  </script>
+<script src="./mainapp_files/slick.rowselectionmodel.js" type="text/javascript">  </script>
+
+
+<script src="./mainapp_files/jquery.mockjax.js" type="text/javascript"></script>
+<script src="./mainapp_files/ajaxresponse.js" type="text/javascript"></script>
+
+<!-- <script src = "js/app.js" type = "text/javascript" >  </script> -->
+
+<script src="./mainapp_files/utils1.js" type="text/javascript">  </script>
+<script src="./mainapp_files/app.js" type="text/javascript">  </script>
+<script src="./mainapp_files/utils.js" type="text/javascript">  </script>
+<script src="./mainapp_files/record.js" type="text/javascript">  </script>
+<script src="./mainapp_files/filter.js" type="text/javascript">  </script>
+<script src="./mainapp_files/header.js" type="text/javascript">  </script>
+<script src="./mainapp_files/invite.js" type="text/javascript">  </script>
+<script src="./mainapp_files/record(1).js" type="text/javascript">  </script>
+<script src="./mainapp_files/field.js" type="text/javascript">  </script>
+<script src="./mainapp_files/fieldvalue.js" type="text/javascript">  </script>
+<script src="./mainapp_files/klass.js" type="text/javascript">  </script>
+<script src="./mainapp_files/record(2).js" type="text/javascript">  </script>
+<script src="./mainapp_files/user.js" type="text/javascript">  </script>
+<script src="./mainapp_files/templates.js" type="text/javascript">  </script>
+<!--
+<script src = "js/app/appdata.js" type = "text/javascript" >  </script>
+-->
+ 
+<link href="./mainapp_files/app_formatted.css" rel="stylesheet" type="text/css" charset="utf-8">
+
+
+<style type="text/css" rel="stylesheet">.slickgrid_445641 .slick-header-column { left: 1000px; } .slickgrid_445641 .slick-top-panel { height:25px; } .slickgrid_445641 .slick-headerrow-columns { height:25px; } .slickgrid_445641 .slick-cell { height:18px; } .slickgrid_445641 .slick-row { width:380px; height:25px; } .slickgrid_445641 .lr { float:none; position:absolute; } .slickgrid_445641 .l0 { left: 0px; } .slickgrid_445641 .r0 { right: 360px; } .slickgrid_445641 .l1 { left: 20px; } .slickgrid_445641 .r1 { right: 320px; } .slickgrid_445641 .l2 { left: 60px; } .slickgrid_445641 .r2 { right: NaNpx; } .slickgrid_445641 .l3 { left: NaNpx; } .slickgrid_445641 .r3 { right: NaNpx; } .slickgrid_445641 .l4 { left: NaNpx; } .slickgrid_445641 .r4 { right: NaNpx; } .slickgrid_445641 .l5 { left: NaNpx; } .slickgrid_445641 .r5 { right: NaNpx; }</style><style type="text/css" rel="stylesheet">.slickgrid_832878 .slick-header-column { left: 1000px; } .slickgrid_832878 .slick-top-panel { height:25px; } .slickgrid_832878 .slick-headerrow-columns { height:25px; } .slickgrid_832878 .slick-cell { height:18px; } .slickgrid_832878 .slick-row { width:380px; height:25px; } .slickgrid_832878 .lr { float:none; position:absolute; } .slickgrid_832878 .l0 { left: 0px; } .slickgrid_832878 .r0 { right: 360px; } .slickgrid_832878 .l1 { left: 20px; } .slickgrid_832878 .r1 { right: 320px; } .slickgrid_832878 .l2 { left: 60px; } .slickgrid_832878 .r2 { right: NaNpx; } .slickgrid_832878 .l3 { left: NaNpx; } .slickgrid_832878 .r3 { right: NaNpx; } .slickgrid_832878 .l4 { left: NaNpx; } .slickgrid_832878 .r4 { right: NaNpx; } .slickgrid_832878 .l5 { left: NaNpx; } .slickgrid_832878 .r5 { right: NaNpx; }</style></head>
+<body>
+		 <div id="header-container"><div id="search">
+  <table>
+    <tbody><tr>
+      <td>
+        <input type="text" id="search-field" length="30" placeholder="Search">
+      </td>
+      <td>
+        <input type="submit" class="green-button" id="create-record-button" value="Create New" original-title="Ctrl-N">
+      </td>
+      <td>
+        &nbsp;&nbsp;&nbsp; <a id="switch-app-link">&nbsp;  &nbsp;  ?</a><ul id="header-app-list"><li class="switch-app-row"></li><li><div class="switch-app-row"><a href="file:///home/asvini2/Desktop/apps/new">App Store</a></div></li></ul>
+      </td>
+      <td><img src="file:///images/loading_small.gif" id="spinner" style="display:none;"></td>
+    </tr>
+  </tbody></table>
+</div>
+</div>
+		 <div id="header" style="width: 1366px; "> </div>
+		 
+		<div id="main" style="width: 1366px; ">
+			 <div id="left-column" style="height: 532px; "></div>
+			 <div id="middle-column" tabindex="0" hidefocus="true" style="position: relative; overflow-x: hidden; overflow-y: hidden; outline-width: 0px; outline-style: initial; outline-color: initial; height: 532px; width: 709px; " class="slickgrid_445641 ui-widget slickgrid_832878"><div class="slick-header ui-state-default" style="overflow:hidden;position:relative;"><div class="slick-header-columns ui-sortable" style="width:10000px; left:-1000px" unselectable="on"><div class="ui-state-default slick-header-column" id="slickgrid_832878_order" style="width: 12px; " title=""><span class="slick-column-name"></span></div><div class="ui-state-default slick-header-column" id="slickgrid_832878Done" style="width: 32px; " title="Done"><span class="slick-column-name">Done</span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_832878Task" title="Task"><span class="slick-column-name">Task</span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_832878Project" title="Project"><span class="slick-column-name">Project</span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_832878Priority" title="Priority"><span class="slick-column-name">Priority</span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_832878Deadline" title="Deadline"><span class="slick-column-name">Deadline</span><div class="slick-resizable-handle"></div></div></div></div><div class="slick-headerrow ui-state-default" style="overflow-x: hidden; overflow-y: hidden; position: relative; display: none; "><div class="slick-headerrow-columns" style="width:10000px;"></div></div><div class="slick-top-panel-scroller ui-state-default" style="overflow-x: hidden; overflow-y: hidden; position: relative; display: none; "><div class="slick-top-panel" style="width:10000px"></div></div><div class="slick-viewport" tabindex="0" hidefocus="" style="width: 100%; overflow-x: auto; outline-width: 0px; outline-style: initial; outline-color: initial; position: relative; overflow-y: auto; height: 507px; "><div class="grid-canvas" tabindex="0" hidefocus="" style="width: 420px; height: 492px; "><div class="ui-widget-content slick-row  even" row="0" style="top:0px"><div class="slick-cell lr l0 r0 cell-reorder dnd"></div><div class="slick-cell lr l1 r1">1</div><div class="slick-cell lr l2 r2">Task 1</div><div class="slick-cell lr l3 r3">PRoj 1</div><div class="slick-cell lr l4 r4">Feature</div><div class="slick-cell lr l5 r5">01/01/2000</div></div><div class="ui-widget-content slick-row  odd" row="1" style="top:25px"><div class="slick-cell lr l0 r0 cell-reorder dnd"></div><div class="slick-cell lr l1 r1">0</div><div class="slick-cell lr l2 r2">Task 232</div><div class="slick-cell lr l3 r3">PRoj 121232</div><div class="slick-cell lr l4 r4">Feature</div><div class="slick-cell lr l5 r5">01/02/2000</div></div><div class="ui-widget-content slick-row  even" row="2" style="top:50px"><div class="slick-cell lr l0 r0 cell-reorder dnd"></div><div class="slick-cell lr l1 r1">1</div><div class="slick-cell lr l2 r2">Task 444</div><div class="slick-cell lr l3 r3">PRoj 13232</div><div class="slick-cell lr l4 r4">Bug</div><div class="slick-cell lr l5 r5">01/03/2000</div></div><div class="ui-widget-content slick-row  odd" row="3" style="top:75px"><div class="slick-cell lr l0 r0 cell-reorder dnd"></div><div class="slick-cell lr l1 r1">1</div><div class="slick-cell lr l2 r2">Task 56</div><div class="slick-cell lr l3 r3">PRoj 13232</div><div class="slick-cell lr l4 r4">Bug</div><div class="slick-cell lr l5 r5">01/03/2000</div></div></div></div></div>
+			 <div id="right-column" style="height: 532px; "><div class="record-form"><div id="record-toolbar"><div id="record-message" style="display: none; ">Draft saved.</div><input type="button" class="green-button" id="save-button" title="Ctrl-S" value="Save"><input type="button" class="gray-button" id="clear-draft-button" value="Clear Draft"><div class="clear"></div></div><div class="field-row"><label>Task</label>
+<input type="text" value="">
+</div><div class="field-row"><label>Employee Code</label>
+<input type="text" value="">
+</div><div class="field-row"><label>New Field</label>
+<input type="text" value="">
+</div><div class="field-row"><label>Test String Field</label>
+<input type="text" value="">
+</div><div class="field-row"><label>Done</label>
+<span style="padding-top: 4px; display: inline-block; height: 18px">
+  
+    
+    
+      <input type="checkbox">
+    
+  
+</span>
+</div><div class="field-row"><label>Notes</label>
+<textarea style="resize: none; overflow-y: hidden; position: absolute; top: 0px; left: -9999px; width: 296px; line-height: 13px; text-decoration: none; letter-spacing: normal; height: 0px; " tabindex="-1"></textarea><textarea style="resize: none; overflow-y: hidden; height: 111px; "></textarea>
+</div><div class="field-row"><label>My Notes</label>
+<textarea style="resize: none; overflow-y: hidden; position: absolute; top: 0px; left: -9999px; width: 296px; line-height: 13px; text-decoration: none; letter-spacing: normal; height: 0px; " tabindex="-1"></textarea><textarea style="resize: none; overflow-y: hidden; height: 111px; "></textarea>
+</div><div class="field-row"><label>Tech</label>
+<span style="padding-top: 4px; display: inline-block; height: 18px">
+  
+    
+    
+      <input type="checkbox">
+    
+  
+</span>
+</div><div class="field-row"><label>Project</label>
+<select id="select-Project">
+  <option value="" selected=""></option>
+  
+  <option value="edit_values">Edit values...</option>
+</select>
+</div><div class="field-row"><label>Deadline</label>
+<input type="text" value="" id="dp1343391611015" class="hasDatepicker">
+</div><div class="field-row"><label>Priority</label>
+<select>
+
+
+  <option value="Feature" selected="">Feature</option>
+
+  <option value="Bug">Bug</option>
+
+  <option value="Wont Fix">Wont Fix</option>
+
+</select>
+</div><div class="field-row"><label>Test Priority</label>
+<select>
+
+  <option value=""></option>
+
+
+  <option value="Option 1">Option 1</option>
+
+  <option value="Bug">Bug</option>
+
+  <option value="Wont Fix" selected="">Wont Fix</option>
+
+</select>
+</div><div class="field-row"><label>Creator</label>
+<span style="padding-top: 4px; display: inline-block; width: 300px">admin@empwise.com</span>
+</div><div class="field-row"><label>Assigned</label>
+<select>
+  
+    <option value="" selected=""></option>
+  
+  
+</select></div><div class="field-row"><label>Comments</label>
+<div class="text-multi-container">
+  
+    <div class="text-multi-field">
+      <div class="text-multi-header">
+        <div class="text-multi-timestamp"> 
+           
+        </div>
+        
+          <div class="text-multi-editor">
+            
+          </div>
+        
+        <div class="clear"></div>
+      </div>
+      <div class="text-multi-text Comments">fdgdfgfg</div>
+      
+        <br><br>
+        <a class="edit-Comments" index="0">Edit</a>
+        <a class="delete-Comments" index="0">Delete</a>
+      
+      
+    </div>
+  
+  <div class="field-row" style="padding-left:0px;padding-top:0px;"><textarea style="resize: none; overflow-y: hidden; position: absolute; top: 0px; left: -9999px; height: 96px; width: 296px; line-height: 13px; text-decoration: none; letter-spacing: normal; " tabindex="-1"></textarea><textarea id="new-Comments" style="resize: none; overflow-y: hidden; "></textarea>
+  <div class="field-row" style="padding-left:0px;"><input type="button" class="button add-entry" value="Add"></div>
+</div>
+</div></div><div class="field-row"><label>Attachment</label><a id="Attachment-link" href=""></a><span class="save-first">Record must be saved before you can attach a file</span></div><div class="field-row"><label>Sample text Field</label>
+<textarea style="resize: none; overflow-y: hidden; position: absolute; top: 0px; left: -9999px; width: 296px; line-height: 13px; text-decoration: none; letter-spacing: normal; height: 0px; " tabindex="-1"></textarea><textarea style="resize: none; overflow-y: hidden; height: 111px; "></textarea>
+</div><div class="field-row"><label>Sample Date Field</label>
+<input type="text" value="" id="dp1343391611016" class="hasDatepicker">
+</div></div></div>
+		</div>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+		console.log ( 'load mainapp.html metadata ');
+//app js start
+var klassdata = {
+	"user" : {
+		"id" : 428,
+		"name" : "New App",
+		"email" : "admin@empwise.com"
+	},
+	"apps" : [{
+			"app" : {
+				"id" : 200,
+				"name" : 'taskapp_new',
+				"klasses" : [{
+						"fields" : [{
+								"field_type" : "StringField",
+								"name" : "Task"
+							}, {
+								"field_type" : "StringField",
+								"name" : "Employee Code"
+							}, {
+								"field_type" : "StringField",
+								"name" : "New Field"
+							}, {
+								"field_type" : "StringField",
+								"name" : "Test String Field"
+							},
+							{
+								"width" : 40,
+								"field_type" : "BoolField",
+								"name" : "Done"
+							}, {
+								"field_type" : "TextField",
+								"name" : "Notes"
+							}, {
+								"field_type" : "TextField",
+								"name" : "My Notes"
+							}, {
+								"field_type" : "BoolField",
+								"name" : "Tech"
+							}, {
+								"field_type" : "OptionSelectField",
+								"name" : "Project"
+							}, {
+								"field_type" : "DateField",
+								"name" : "Deadline"
+							}, {
+								"field_type" : "SelectField",
+								"allow_null" : false,
+								"default" : "Feature",
+								"values" : {
+									"opt1" : "Feature",
+									"opt2" : "Bug",
+									"opt3" : "Wont Fix"
+								},
+								"name" : "Priority"
+							}, {
+								"field_type" : "SelectField",
+								"allow_null" : true,
+								"default" : "Wont Fix",
+								"values" : {
+									"opt1" : "Option 1",
+									"opt2" : "Bug",
+									"opt3" : "Wont Fix"
+								},
+								"name" : "Test Priority"
+							}, {
+								"allow_null" : false,
+								"field_type" : "CurrentUserField",
+								"name" : "Creator"
+							}, {
+								"allow_null" : true,
+								"field_type" : "UserField",
+								"name" : "Assigned"
+							}, {
+								"name" : "Followers",
+								"action" : "Add",
+								"field_type" : "UserMultiField",
+								"show_users" : true,
+								"reverse_action" : "Remove",
+								"add_others" : true
+							}, {
+								"timestamps" : true,
+								"editors" : true,
+								"editable" : true,
+								"name" : "Comments",
+								"field_type" : "TextMultiField"
+							}, {
+								"field_type" : "FileField",
+								"name" : "Attachment"
+							},
+							{
+								"field_type" : "TextField",
+								"name" : "Sample text Field"
+							},
+							{
+								"field_type" : "DateField",
+								"name" : "Sample Date Field"
+							}
+						],
+						"showall" : true,
+						"reorderable" : true,
+						"name" : "Tasks",
+						"id" : 100,
+						"filters" : [{
+								"field" : "Assigned",
+								"code" : [
+									"equals_value('status', 'In Progress')"
+								],
+								"type" : "User",
+								"name" : "Assigned"
+							}, {
+								"field" : "Project",
+								"code" : [
+									"not_equals_value('done', 1)"
+								],
+								"type" : "Select",
+								"name" : "Project",
+								"id" : "P003"
+							}, {
+								"code" : [
+									"equals_value('done', 0)"
+								],
+								"name" : "Active"
+							}, {
+								"code" : [
+									"equals_value('done', 1)"
+								],
+								"name" : "Done"
+							}, {
+								"code" : [
+									"equals_user('assigned', @current_user)",
+									"not_equals_value('done', 1)"
+								],
+								"name" : "Assigned To Me"
+							}
+						],
+						"show" : [
+							"Done",
+							"Task",
+							"Project",
+							"Priority",
+							"Deadline"
+						]
+					}
+				]
+			}
+			
+		}
+	]
+	
+};
+
+
+		
+		/*
+		var appdata = {
+				user : {
+					"id" : 428,
+					"name" : "New App",
+					"email" : "admin@empwise.com"
+				},
+				apps : [{
+						"app" : {
+							"id" : 123,
+							"klasses" : [{
+									"fields" : [{
+											"type" : "String",
+											"name" : "Task"
+										}, {
+											"width" : 40,
+											"type" : "Bool",
+											"name" : "Done"
+										}, {
+											"type" : "Text",
+											"name" : "Notes"
+										}, {
+											"type" : "OptionSelect",
+											"name" : "Project"
+										}, {
+											"type" : "Date",
+											"name" : "Deadline"
+										}, {
+											"allow_null" : false,
+											"type" : "CurrentUser",
+											"name" : "Creator"
+										}, {
+											"allow_null" : true,
+											"type" : "User",
+											"name" : "Assigned"
+										}, {
+											"name" : "Followers",
+											"action" : "Add",
+											"type" : "UserMulti",
+											"show_users" : true,
+											"reverse_action" : "Remove",
+											"add_others" : true
+										}, {
+											"timestamps" : true,
+											"editors" : true,
+											"editable" : true,
+											"name" : "Comments",
+											"type" : "TextMulti"
+										}, {
+											"type" : "File",
+											"name" : "Attachment"
+										}
+									],
+									"reorderable" : true,
+									"name" : "Tasks",
+									"filters" : [{
+											"code" : [
+												"equals_value('done', 0)"
+											],
+											"name" : "Active"
+										}, {
+											"code" : [
+												"equals_value('done', 1)"
+											],
+											"name" : "Done"
+										}, {
+											"code" : [
+												"equals_user('assigned', @current_user)",
+												"not_equals_value('done', 1)"
+											],
+											"name" : "Assigned To Me"
+										}, {
+											"field" : "Assigned",
+											"code" : [
+												"equals_value('status', 'In Progress')"
+											],
+											"type" : "User",
+											"name" : "Assigned"
+										}, {
+											"field" : "Project",
+											"code" : [
+												"not_equals_value('done', 1)"
+											],
+											"type" : "Select",
+											"name" : "Project",
+											"id" : "P002"
+										}
+									],
+									"show" : [
+										"Done",
+										"Task"
+									]
+								}
+							]//klass end
+						},
+						"name" : 'taskapp'
+						
+					}
+				]//apps end
+				
+			};
+*/			
+			console.log('app init');
+			App.init(klassdata);
+		});
+ 
+	
+		</script>
+	 
+   <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; left: 1008px; top: 462px; z-index: 1; display: none; "><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" onclick="DP_jQuery_1343391518108.datepicker._adjustDate(&#39;#dp1343391518111&#39;, -1, &#39;M&#39;);" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" onclick="DP_jQuery_1343391518108.datepicker._adjustDate(&#39;#dp1343391518111&#39;, +1, &#39;M&#39;);" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">July</span>&nbsp;<span class="ui-datepicker-year">2012</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th><th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">1</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">2</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">3</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">4</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">5</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">6</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">7</a></td></tr><tr><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">8</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">9</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">10</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">11</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">12</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">13</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">14</a></td></tr><tr><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">15</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">16</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">17</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">18</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">19</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">20</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">21</a></td></tr><tr><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">22</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">23</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">24</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">25</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">26</a></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-today" onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default ui-state-highlight" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">27</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">28</a></td></tr><tr><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">29</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">30</a></td><td class=" " onclick="DP_jQuery_1343391518108.datepicker._selectDay(&#39;#dp1343391518111&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div>    <div id="facebox" style="top: 65.4px; left: 490px; display: none; ">       <div class="popup">         <div class="content"><div class="popup-top">
+  <span style="text-transform:capitalize">Project</span>
+</div>
+<div class="popup-body">
+  <div id="options-list"></div>
+  Add:
+  <input type="text" id="new-option" placeholder="">
+  <div id="invite-alert"></div>
+</div>
+</div>         <a href="file:///home/asvini2/Desktop/appwise%20_backbone/mainapp.html#" class="close"><img src="file:///plugins/facebox/closelabel.png" class="close_image" title="close"><img src="file:///plugins/facebox/closelabel.png" class="close_image" title="close"></a>       </div>     </div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; left: 1008px; top: 462px; z-index: 1; display: none; "><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" onclick="DP_jQuery_1343391611013.datepicker._adjustDate(&#39;#dp1343391611016&#39;, -1, &#39;M&#39;);" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" onclick="DP_jQuery_1343391611013.datepicker._adjustDate(&#39;#dp1343391611016&#39;, +1, &#39;M&#39;);" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">July</span>&nbsp;<span class="ui-datepicker-year">2012</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th><th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">1</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">2</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">3</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">4</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">5</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">6</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">7</a></td></tr><tr><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">8</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">9</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">10</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">11</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">12</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">13</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">14</a></td></tr><tr><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">15</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">16</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">17</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">18</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">19</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">20</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">21</a></td></tr><tr><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">22</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">23</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">24</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">25</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">26</a></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-today" onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default ui-state-highlight" href="file:///home/asvini2/Desktop/mainapp.html#">27</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">28</a></td></tr><tr><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">29</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">30</a></td><td class=" " onclick="DP_jQuery_1343391611013.datepicker._selectDay(&#39;#dp1343391611016&#39;,6,2012, this);return false;"><a class="ui-state-default" href="file:///home/asvini2/Desktop/mainapp.html#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div>    <div id="facebox" style="display:none;">       <div class="popup">         <div class="content" style=""><div class="popup-top">
+  <span style="text-transform:capitalize">Project</span>
+</div>
+<div class="popup-body">
+  <div id="options-list"></div>
+  Add:
+  <input type="text" id="new-option" placeholder="">
+  <div id="invite-alert"></div>
+</div>
+</div>         <a href="file:///home/asvini2/Desktop/mainapp.html#" class="close" style=""><img src="file:///plugins/facebox/closelabel.png" class="close_image" title="close"></a>       </div>     </div></body></html>

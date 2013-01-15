@@ -1,0 +1,8 @@
+production:
+  bucket: demo-poc-1
+  access_key_id: AKIAI5QLEGA3VO2WITEQ
+  secret_access_key: 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
+development:
+  bucket: demo-poc-1
+  access_key_id: AKIAI5QLEGA3VO2WITEQ
+  secret_access_key: 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

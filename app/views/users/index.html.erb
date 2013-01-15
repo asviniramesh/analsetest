@@ -1,0 +1,35 @@
+<%=form_for :ids, :url=>{:controller => "users", :action=> "selected_files"} do |f|%>
+<br /><br /><h1> <u>List Of Files</u></h1><br/><br/>
+<% @users.each do |user| %>
+<h3><input name="id[]" id="<%="#{user.id}"%>" value="<%="#{user.id}"%>" type="checkbox"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=user.avatar_file_name%></h3><br/><br/>
+   
+<% end %>
+<br/>
+<%=f.submit "submit", :id=>"select_file"%>
+<%end%>
+<br/>
+<br/>
+<%=will_paginate @users%>
+<br/>
+<h3 align='left'><%= link_to 'Back',root_path %></h3>
+<script>
+$('ids_')
+</script>
+<script>
+$('#select_file').click(function(){
+var sList = "";
+$('input[type=checkbox]').each(function () {
+    sList += (this.checked ? "true" : "false");
+});
+if (sList.match("true"))
+{
+return true;
+
+}
+else
+{
+
+return false;
+}
+});
+</script>

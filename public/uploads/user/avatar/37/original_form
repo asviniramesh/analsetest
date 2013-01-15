@@ -1,0 +1,610 @@
+  <%=form_for(@product,:url=>{:action=>"create"},:validate => true,:html=>{ :multipart => true}) do |f| %>
+  <div class="container">
+    <div class="closeBtn"> <a href= "/login">&nbsp;</a></div>
+      <div class="formCnt regsteps">
+        <div class="topText">Fusce eget aliquam</div>
+          <div class="step1">
+            <h2>Class aptent taciti sociosqu <span>Donec sollicitudin, nibh ut mattis molestie, velit tellus scelerisque quam, iaculis aliquet magna odio non magna.</span> </h2>
+            <ul>
+              <li class="option1 radio_button">
+                <input type="radio" name="radio_val" value="a" id="a"/>
+                <h3>Nulla quis</h3>
+                <p>Curabitur cursus, neque varius cursus malesuada, nibh erat cursus nunc, eu pretium lorem turpis nec.</p>
+              </li>
+              <li class="option2 radio_button">
+                <input type="radio" name="radio_val" value="b" id="b"/>
+                <h3> + <span>$</span> Nulla quis and iou</h3>
+                <p>Curabitur cursus, neque varius cursus malesuada, nibh erat cursus nunc, eu pretium lorem turpis nec sem. Nunc odio dui, blandit tincidunt euismod ac, facilisis id nulla.</p>
+              </li>
+              <li class="option3 radio_button">
+                <input type="radio" name="radio_val" value="c" id="c" />
+                <h3>Nam adipiscing </h3>
+                <p>Curabitur cursus, neque varius cursus malesuada, nibh erat cursus nunc, eu pretium lorem turpis nec sem. </p>
+              </li>
+            </ul>
+          </div>
+		      <div class="step2">
+            <h2>Class aptent taciti sociosqu <span>Vivamus semper massa erat, euismod blandit quam. Phasellus bibendum, mauris non varius blandit, quam
+              augue tincidunt purus, eget scelerisque erat mauris in ipsum. </span> </h2>
+              <div class="simple" style="display:none;">
+            <ul>
+              <li>
+                <h3 class="listA">Transipio Io</h3>
+                <h4 class="choosecountry"><span class="select_currency_image"><img src="/assets/flags/24/United-States-of-America.png"/></span><br />
+                  <span class="select_currency_display">USD</span><br/><a id="various1" href="#inline1">choose another</a></h4>
+                  <div style="display: none;">
+		                  <div id="inline1" style="width:200px;height:215px;overflow:auto;">
+			                    <%= render :partial => "load", :locals => { :currencies => @currencies }%>
+		                  </div>
+	                </div>
+
+                <h3 class="qst">Donec sollici tudin, nibh ut mattis?</h3>
+                <p>Pellentesque lorem ligula, dictum nec lobortis nec, euismod interdum lectus. Suspendisse sit amet felis in eros sollicitudin bibendum. Phasellus posuere fermentum sem, ac volutpat orci hendrerit at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <h3 class="listB"> Baroco Tampisio</h3>
+                <h4 class="txt_align"><span class="select_currency_image">&nbsp;<img src="/assets/flags/24/United-States-of-America.png"/></span> 
+                <input type="textbox" name="curreny_price" id="price_enter" class="text" autocomplete="off" value="<%=params[:curreny_price] ? params[:curreny_price] : ''%>" maxlength=6/>
+                &nbsp;
+                <span class="display_price"></span>
+                
+                  IGB <span class="igo_icon">&nbsp;</span> </h4>
+									 <input type="hidden" name="currency_rate" id="currency_rate_id" value="0.65913"/>
+									 <input type="hidden" name="currency_type" id="currency_type_id" value="USD"/>
+                <h3 class="qst">Donec sollicitudin, nibh ut mattis?</h3>
+                <p>Pellentesque lorem ligula, dictum nec lobortis nec, euismod interdum lectus. Suspendisse sit amet felis in eros sollicitudin bibendum. Phasellus posuere fermentum sem, ac volutpat orci hendrerit at. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+            </ul>
+            </div>
+            </div>
+
+  <div class="step3">
+            <h2>Post <span>Enter your offer and click submit to post. </span> </h2>
+            <div class="complex" style="display:none;">
+            <div class="list">
+              <h3>privacy <span>(click all that apply):</span></h3>
+              <span class="post_check error">Privacy (at least one checkbox) is required</span>
+              <ul class="checkbox_list">
+                <li class="public_class_chk">								
+                  <label class="check_box_class">
+                    <input checked="checked" class="post_check_val" id="post_post_id_" name="is_public" type="checkbox"/>
+                    <span>public</span>
+                  </label>        
+                </li>
+                <li class="">								
+                  <label class="check_box_class">
+                      <input checked="checked" class="post_check_val" id="post_post_id_" name="is_friends" type="checkbox"  />
+                      <span>friends</span>
+                  </label>        
+                </li>
+                <li class="">								
+                  <label class="check_box_class">
+                    <input checked="checked" class="post_check_val" id="post_post_id_" name="is_trading_partners" type="checkbox"/>
+                    <span>trading partners</span>
+                  </label>        
+                </li>
+                <li class="">								
+                  <label class="check_box_class">
+                      <input checked="checked" class="post_check_val" id="post_post_id_" name="is_communities" type="checkbox"/>
+                      <span>communities</span></label>        
+                </li>
+                <li class="">								
+                  <label class="check_box_class">
+                      <input checked="checked" class="post_check_val" id="post_post_id_" name="is_in_need" type="checkbox" />
+                      <span>in need</span>
+                  </label>        
+                </li>
+              </ul>
+            </div>
+            <div class="formBox">
+              <div class="formLeft">
+                <label>
+								    <%= f.text_field :name,:limit=>"4", :class=>"text product", :autocomplete=>"off", :placeholder=>"product"%>
+                </label>
+                <label>
+								   <%= f.text_field :category, :class=>"text product", :autocomplete=>"off", :placeholder=>"category"%>
+                </label>
+                <label >
+                    <%= f.text_area :offer ,:cols=>"45",:rows=>"5",:autocomplete=>"off", :class=>"uniform product", :placeholder=>"description of offer"%>
+                </label>
+              </div>
+              <div class="formCntr">
+                  <h3>media <span> (click to select/record):</span> </h3>
+									<span class="main_image error1"></span>
+                <ul>
+                  <li>  
+                  <div class="image_1">
+											<%image=find_image(params[:image_5])%>
+                      <%if image%>
+                        <div id="delete_image_1" style="display:none;"><a href="/images/destroy?id=<%=image.id%>" data-remote='true' onclick="$(this).hide()" class="delete_image" title="Delete the image"><%=image_tag "/assets/close_btn.png",:width => "16",:height=>"16" %></a> </div>
+                        <div id="image_1"><%=image_tag image.avatar.url(:small),:width => "85",:height=>"75" %></div>
+                        <input type="hidden" name="image_5" value="<%=image.id%>" id="image_11" class="main_image_val"/>
+                      <%else%>
+                        <div id="delete_image_1" style="display:none;"><a href="/images/destroy?id="  data-remote='true' onclick="$(this).hide()" class="delete_image" title="Delete the image"><%=image_tag "/assets/close_btn.png",:width => "16",:height=>"16" %></a> </div>
+                        <div id="image_1"><%=image_tag "/assets/dummy.jpeg",:width => "85",:height=>"75" %></div>
+                        <input type="hidden" name="image_5" value="" class="main_image_val"/>
+                      <%end%>
+                   </div>
+                  <p>main photo</p>
+                  </li>
+                  <li>
+                    <img src="/assets/img_webcam.gif" width="85" height="75" alt="" class="webcam" />
+                    <p>webcam</p>
+                  </li>
+                  <li>
+									  <div class="additional_photos">
+                      <div class="image_2">
+                        <%image=find_image(params[:image_6])%>
+                        <%if image%>
+                          <div id="delete_image_2" style="display:none;"><a href="/images/destroy?id=<%=image.id%>" data-remote='true' onclick="$(this).hide()" class="delete_image" title="Delete the image"><%=image_tag "/assets/close_btn.png",:width => "16",:height=>"16" %></a> </div>
+                          <div id="image_2"><%=image_tag image.avatar.url(:small),:width => "48",:height=>"48" %></div>
+      <input type="hidden" name="image_6" value="<%=image.id%>" id="image_21"/>
+                        <%else%>
+                          <div id="delete_image_2" style="display:none;"><a href="/images/destroy?id="  data-remote='true' onclick="$(this).hide()" class="delete_image" title="Delete the image"><%=image_tag "/assets/close_btn.png",:width => "16",:height=>"16" %></a> </div>
+                          <div id="image_2"><%=image_tag "/assets/dummy.jpeg",:width => "48",:height=>"48" %></div>
+                          <input type="hidden" value="" name="image_6" />
+                        <%end%>
+				              </div>
+	                    <div class="image_3">
+                        <%image=find_image(params[:image_7])%>
+                        <%if image%>
+                          <div id="delete_image_3" style="display:none;"><a href="/images/destroy?id=<%=image.id%>"  data-remote='true' onclick="$(this).hide()" class="delete_image" title="Delete the image" ><%=image_tag "/assets/close_btn.png",:width => "16",:height=>"16" %></a> </div>
+                          <div id="image_3"><%=image_tag image.avatar.url(:small),:width => "48",:height=>"48" %></div>
+                          <input type="hidden" name="image_7" value="<%=image.id%>" id="image_31"/>
+                        <%else%>
+                          <div id="delete_image_3" style="display:none;"><a href="/images/destroy?id=" data-remote='true' onclick="$(this).hide()" class="delete_image" title="Delete the image"><%=image_tag "/assets/close_btn.png",:width => "16",:height=>"16" %></a> </div>
+                          <div id="image_3"><%=image_tag "/assets/dummy.jpeg",:width => "48",:height=>"48" %></div>
+                          <input type="hidden" value="" name="image_7" />
+                        <%end%>
+		                  </div>
+
+	                    <div class="image_4">
+                        <%image=find_image(params[:image_8])%>
+                        <%if image%>
+                          <div id="delete_image_4" style="display:none;"><a href="/images/destroy?id=<%=image.id%>"  data-remote='true' onclick="$(this).hide()" class="delete_image" title="Delete the image" ><%=image_tag "/assets/close_btn.png",:width => "16",:height=>"16" %></a> </div>
+                          <div id="image_4"><%=image_tag image.avatar.url(:small),:width => "48",:height=>"48" %></div>
+                          <input type="hidden" name="image_8" value="<%=image.id%>" id="image_41"/>
+                        <%else%>
+                          <div id="delete_image_4" style="display:none;"><a href="/images/destroy?id="  data-remote='true' onclick="$(this).hide()" class="delete_image" title="Delete the image"><%=image_tag "/assets/close_btn.png",:width => "16",:height=>"16" %></a> </div>
+                          <div id="image_4"><%=image_tag "/assets/dummy.jpeg",:width => "48",:height=>"49" %></div>
+                          <input type="hidden" value="" name="image_8" />
+                        <%end%>
+                      </div>
+		                </div>
+                    <p>additional photos </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="formRight">
+                <div id="close_product_price">
+                
+                  <label>
+                    <div class="txt_wraper">
+                    
+                      <%= f.text_field :product_cost,:id=>"product_cost_id",:autocomplete=>"off",:class=>"text product"%>
+                    </div>
+                    <h3>IGB <img src="/assets/icon_product.gif" alt="" width="27" height="24" align="absmiddle" /> <span>product price</span> </h3>
+                  </label>
+                </div>
+                <div id="close_shipping_cost">
+                  <label>
+                    <div class="txt_wraper">
+                      <%= f.text_field :shipping_cost,:class=>"text product" ,:autocomplete=>"off", :placeholder=>"shipping costs"%>
+                    </div>
+                    <h3><span class="select_currency_code"></span><span class="select_currency_image"><img src="/assets/flags/24/United-States-of-America.png"/></span><span>shipping costs</span></h3>
+                  </label>
+                </div>
+                <div id ="close_other_cost">
+                  <label>
+                    <div class="txt_wraper">
+                      <%= f.text_field :other_cost,:class=>"text product",:autocomplete=>"off", :placeholder=>"other costs"%>
+                      <span class="validate_other_cost error1"></span>
+                    </div>
+                    <h3><span class="select_currency_code"></span><span class="select_currency_image"><img src="/assets/flags/24/United-States-of-America.png"/></span><span>other costs</span></h3>
+                  </label>
+                </div>
+								
+                <label>
+                
+                  <input type="checkbox" name="offer_expire" id="offer_expire_date" <%if params[:offer_expire]%>checked="true"<%end%> />
+                  <span> offer expires?</span>
+                </label>
+                <div id="expiry_date_section" <%if params[:offer_expire]%>style="display:block;"<%else%>style="display:none;"<%end%>>
+                   <label style="padding:0 0 10px 0">
+                      <div class="txt_wraper"><%= f.text_field :expire_date,:readonly=>true,:class=>"expiry_date text product"%></div>
+                      <h3 style="padding-top:11px;"> <span>expiration date </span> </h3>
+                  <span class="validate_expire_date error1"></span>
+                </label>
+                </div>
+              </div>
+            </div>
+            <div class="policyBox">
+             <div style="float:left;"><label >
+                    <%= f.text_area :shipping_policy,:cols=>"45",:rows=>"5", :class=>"uniform product" ,:autocomplete=>"off", :placeholder=>"shipping policy"%>
+                                   <span class="validate_shipping_cost error1"></span>
+
+              </label></div>
+              <label class="fr">
+                <%= f.text_area :return_policy,:cols=>"45",:rows=>"5" , :class=>"uniform" , :placeholder=>"return policy"%>
+              </label>
+            </div>
+           
+            <center><div class="submit">
+             	<%=f.submit "Submit", :id=>"create_product"%>
+<%end%></center>
+            </div>
+            </div>
+          </div>
+        </div>
+				</div>
+       
+
+        
+<script>
+var first_image=0;
+$(document).ready(function() {
+
+$(".step2").show();
+$(".step3").show();
+if($('.field_with_errors').length!=0)
+{
+$(".simple").show();
+$(".complex").show();
+
+}
+    $("#various1").fancybox({
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+        'titlePosition'		: 'inside'       
+    });
+    $('#price_enter').blur(function(){
+    $('.complex').show();
+$('html, body').animate({
+         scrollTop: $(".step3").offset().top
+     }, 1000);
+});
+
+
+var action = "<%=params[:action]%>"
+if (action == 'create')
+{
+var select_option = "<%=params[:radio_val]%>"
+
+$("#"+select_option).click();
+$(".step3").show();
+}
+$(".checkbox_list .public_class_chk").change(function()
+{
+public_class =$(".public_class_chk label input").first().is(":checked");
+if (public_class == false)
+{
+$(".checkbox_list label input").prop("checked",false);
+//$(".checkbox_list label").attr("class",'');
+}
+else
+{
+$(".checkbox_list label input").prop("checked",true);
+//$(".checkbox_list label").attr("class","check_box_class");
+}
+});
+
+
+
+//~ if ($('.noty_text').text()!="")
+//~ //main_image();
+//~ check_shipping_cost();
+//~ if ($("#product_shipping_policy").next('span').text().length>0)
+    //~ {
+    //~ var a=$('.noty_text').text();
+    //~ var a1=a+" -Shipping Policy can't be blank";
+//~ $('.noty_text').text(a1);
+    //~ }
+    $('.main_image').text("");
+});
+			
+	$(function(){
+        $("input[type='submit'], button").uniform();
+      });
+
+function price_calculation(currency_rate)
+{
+var price;
+if ($("#price_enter").val()!="")
+{
+price=(($("#price_enter").val())*currency_rate*2)
+$("#product_cost_id").val(Math.round(price));
+$(".display_price").text(Math.round(price));
+
+$(".step3").show();
+}
+}
+
+$("input:radio").live('click',function(){
+
+$(".simple").show();
+});
+
+$(".select_currency").live('click',function(){ 
+var b=$(this).attr('value');
+var value=$(this).attr('id').replace(/\s/g, '-');
+$.get("/currency/rate",{id : $(this).attr('value')},
+function(data)
+{
+$("#currency_rate_id").val(data);
+price_calculation(data);
+});
+$("#currency_type_id").val(b);
+$(".select_currency_image").html("<img src=/assets/flags/24/"+value+".png  />");
+$(".select_currency_display").text(b);
+$(".select_currency_code").text(b);
+$.fancybox.close();
+});
+
+$("#offer_expire_date").change(function(){
+if ($("#offer_expire_date").is(':checked'))
+$("#expiry_date_section").show();
+else
+$("#expiry_date_section").hide();
+});
+
+
+
+
+
+
+function check(){
+if ($("#offer_expire_date").is(':checked'))
+{
+if($("#product_expire_date").val().length ==0){
+$(".validate_expire_date").text("can't be blank");
+$("#product_expire_date").addClass('err_msg');
+return false;
+}
+else
+return true;
+}
+else
+{
+return true;
+}
+}
+
+
+
+$("#price_enter").keyup(function(){
+var currency_rate=$("#currency_rate_id").val();
+price_calculation(currency_rate);
+});
+
+  $("#image_1,#image_2,#image_3,#image_4").click(function()
+  {
+  if($(this).attr('id')=='image_1')
+    first_image=1;
+    var position=$(this).attr('id').split('_')[1];
+    var image=$(".image_"+position).children("input").attr("value");
+    $(".main_image").removeClass('err_msg');
+    
+    if (image == ""){
+      $.colorbox({href:"/products/new_image/"+position,width:"500px", height:"350px"});
+    }
+    else
+    {
+      $.colorbox({href:"/products/new_image/"+position+'/'+image,width:"500px", height:"350px"});
+    }
+
+  });
+  $(function() {
+    $( ".expiry_date" ).datepicker({
+      dateFormat: "yy-mm-dd", changeMonth: true,changeYear: true,showButtonPanel: true, minDate:'0'
+
+    });
+  });
+  //~ $(".image_1,.image_2,.image_3,.image_4").change(function(){alert('gu');});
+  
+  $(".image_1,.image_2,.image_3,.image_4").hover(
+  function(){
+    var id=$(this).attr('class').split('_')[1];
+    var dummy_image=$(this).children('div input').val();
+    if  (dummy_image != "")
+    {
+<%if !request.url.include?"show"%>
+        $("#delete_image_"+id).show();
+<%end%>
+    }},
+  function(){
+    var id=$(this).attr('class').split('_')[1];
+    $("#delete_image_"+id).hide();
+  }
+);
+
+  $("#delete_image_1,#delete_image_2,#delete_image_3,#delete_image_4").click(function()
+  {
+    if(confirm('Are you sure you want to delete?'))
+      return true;
+    else
+      $('.delete_image').show();
+    return false;
+  });
+
+	  function check_shipping_cost()
+  {
+    if ($("#product_shipping_cost").val()>0 && ($("#product_shipping_policy").val().length ==0 || $("#product_shipping_policy").val()=="shipping policy"))
+    {
+      $(".validate_shipping_cost").text("Can't be blank");
+      $('#product_shipping_policy').addClass('err_msg');
+      return false;
+    }
+    else
+    {
+        $(".validate_shipping_cost").text("");
+        $('#product_shipping_policy').removeClass('err_msg');
+        return true;
+    }
+  }
+
+
+	$("#new_product").submit(function()
+	 {
+
+  //main_image();
+  
+  check();
+  //check_other_cost();
+  //check_privacy_val();
+   
+		 if ($(".main_image_val").val()=="") 
+		 {
+		 $(".main_image").text("can't be blank");
+      $('#image_1').addClass('err_msg');
+		 return false;
+		 }
+		 else
+		 {
+		   $(".main_image").text("");
+        $('#image_1').removeClass('err_msg');
+      			 if (check_privacy_val() == true && check_other_cost() == true && check_shipping_cost()==true && check()==true){
+             
+         return all_condition();
+         
+				//return true;
+        }
+				else
+				return false;
+			 }
+       
+function all_condition()
+{
+  var a=b=c=d=e=f=g='';
+  a=($('#product_shipping_cost').val()== "") || ($('#product_shipping_cost').val() == "shipping costs") ? "shipping cost " : "";
+  c= (($('#product_return_policy').val() == "") || ($('#product_return_policy').val() == "return policy")) ? "Return policy" : "";
+  e= ($('#offer_expire_date:checked').length > 0) ? "" : "Offer expires";
+b= ((a.length > 0) && (c.length> 0) && (e.length > 0)) ? ', ':'';
+g = ((a.length > 0) && (c.length> 0) && (e.length == 0)) ? 'and ':'';
+d= (((a.length > 0) || (c.length > 0)) && (e.length > 0)) ? ' and ':'';
+  f= ((a.length > 0) || (c.length > 0) || (e.length > 0)) ? " left blank .Do you still want to continue?" : "Success ";
+  return confirm(a+b+g+c+d+e+f);
+}
+				function check_privacy_val()
+				{
+			 if ($(".check_box_class input:checked").length == 0)
+			 {
+	     $(".post_check").show();
+			 }
+			 else
+			 {
+				$(".post_check").hide();
+        return true;
+			 }
+			 }
+
+
+  function check_other_cost()
+	{
+    if ($("#b").is(":checked") && ($("#product_other_cost").val()=="" ||$("#product_other_cost").val()=="other costs"))
+			{
+        $(".validate_other_cost").text("can't be blank");
+        $("#product_other_cost").addClass('err_msg');
+			}
+			else
+			{
+				$(".validate_other_cost").text("");
+        $("#product_other_cost").removeClass('err_msg');
+        return true;
+				}
+  }
+  
+	});
+  
+  $(function() {
+var a=<%= h("#{@category}").gsub("\&quot;","'") %>
+				$( "#product_category" ).autocomplete({
+			source: a
+		});
+	});
+	
+  
+    
+   //~ function check_offer_expires()
+	//~ {
+      //~ if ($("#offer_expire_date").is(":checked", true) && $("#product_expire_date").val().length == 0)
+			//~ {
+				//~ $(".validate_expire_date").text("Date is required");
+				//~ return false;
+			//~ }
+			//~ else
+			//~ {
+        //~ $(".validate_expire_date").text("");
+				//~ return true;
+      //~ }
+  //~ }
+  $("#product_other_cost").focusout(function(){
+    if ($("#b").is(":checked") && ($("#product_other_cost").val()=="" ||$("#product_other_cost").val()=="other costs"))
+			{
+        $(".validate_other_cost").text("can't be blank");
+        $("#product_other_cost").addClass('err_msg');
+			}
+			else
+			{
+				$(".validate_other_cost").text("");
+        $("#product_other_cost").removeClass('err_msg');
+			}
+  });
+  
+  
+  
+   $("#product_shipping_policy").focusout(function(){
+        if ($("#product_shipping_cost").val()>0 && ($("#product_shipping_policy").val().length ==0 || $("#product_shipping_policy").val()=="shipping policy"))
+    {
+      $(".validate_shipping_cost").text("Can't be blank");
+      $('#product_shipping_policy').addClass('err_msg');
+      return false;
+    }
+    else
+    {
+        $(".validate_shipping_cost").text("");
+        $('#product_shipping_policy').removeClass('err_msg');
+				return true;
+    }
+  });
+  
+$("#product_expire_date").change(function(){
+    if ($("#product_expire_date").val().length ==0)
+    {
+    $(".validate_expire_date").text("can't be blank");
+    $("#product_expire_date").addClass('err_msg');
+    return false;
+    }
+    else
+    {
+       $(".validate_expire_date").text("");
+$("#product_expire_date").removeClass('err_msg');
+return true;
+    }
+  });
+  $("#submit_pro_image").click(function()
+    {
+      $("#image_form").hide();
+      $("#load_image").show();
+    });
+
+    $("#cancel_button").click(function()
+    {
+      $.colorbox.close();
+      $('.main_image').removeClass('err_msg');
+    });
+
+
+$('#image_1').children("img").load(function(){
+  if($(this).attr('src').search('/dummy.jpeg')>-1 && first_image!=0){
+    $('#image_1').addClass('err_msg');
+    $('.main_image').text("can't be blank");
+  }
+  else
+  {
+  $('#image_1').removeClass('err_msg');
+  $('.main_image').text('');
+  }
+  });
+
+</script>
+

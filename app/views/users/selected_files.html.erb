@@ -1,0 +1,45 @@
+<br /><br /><h1 align='center'><u>Analysis</u></h1><br /><br />
+<br /><br />
+<h3 align='center'>
+Filter by keyword <input id="filter" style="background: url('img/filter.png') 95% 60% no-repeat; background-size: 16px; width: 150px;" type="text" /></h3><br/><br/>
+<%require "open-uri"%>
+<%if @users.size>0%>
+<% @users.each do |user| %>
+<div class="jcorgFilterTextParent">
+<h2><%="#{user.avatar_file_name}"%></h2><br/>
+   <div class="jcorgFilterTextChild" align='center'>
+   <p><%#=render :file=>"public/404.html"%><%=open("#{AMAZON_PATH}/#{user.id}/#{user.avatar_file_name}").read.to_s%></p>
+  </div></div><br/><br/><br/>
+<% end %>
+
+<%else%>
+<br/><br/><br/>
+
+<p><h3 align="center" style="color: #772200;">Select the " Back" link to choose the files to analyze.</h3></p>
+<br/>
+
+<%end%>
+<br /><br />
+<div><h3 align='left'><%= link_to 'Back',uploads_path %></h3><h3 align='right'>
+<%= link_to 'Home',root_path %></div>
+<br />
+<br /><br />
+
+
+<script type="text/javascript">
+       jQuery(document).ready(function(){
+          jQuery("#filter").jcOnPageFilter({animateHideNShow: true,
+                    focusOnLoad:true,
+                    highlightColor:'yellow',
+                    textColorForHighlights:'#000000',
+                    caseSensitive:false,
+                    hideNegatives:true,
+                    parentLookupClass:'jcorgFilterTextParent',
+                    childBlockClass:'jcorgFilterTextChild'});
+       });          
+       jQuery('.jcorgFilterTextChild').live('hover',function(){
+       var regex = /(<([^>]+)>)/ig;
+       var a=jQuery(this).children('a').attr('href').replace(regex, "");
+       jQuery(this).children('a').attr('href',a);
+       });
+       </script>

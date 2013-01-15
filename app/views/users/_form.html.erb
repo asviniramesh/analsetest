@@ -1,0 +1,17 @@
+<%= form_for @user,:url=>{:action=>"create"},:html=>{:multipart=>true} do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation" style="color:red">
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %><br/><br/>
+  <div class="field">
+  <%=f.file_field :avatar%>
+  </div><br/><br/><br/>
+  <div class="actions">
+    <%= f.submit "Upload" %>
+  </div><br/><br/>
+<% end %>
